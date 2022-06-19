@@ -1,0 +1,100 @@
+body
+{
+   background : #EEEEEE;
+}
+
+table, tr, th, td
+{
+   margin               : 0px ;
+   padding              : 0px ;
+   border               : 0px ;
+   border-collapse      : collapse ;
+}
+
+table.cssTable th, table.cssTable td
+, table.cssTableNoBorder th, table.cssTableNoBorder td
+{
+   font-size            : 85% ;
+   padding              : 1px 3px 1px 3px ;
+}
+
+table.cssTable th, table.cssTable td
+{
+   border               : 1px solid #888888 ;
+}
+
+table.cssTable th
+{
+   color                : #FFFFFF ;
+   background-color     : #000000 ;
+   text-align           : center ;
+}
+
+table.cssTable td
+{
+   color                : #000000 ;
+   background-color     : #DDDDDD ;
+   text-align           : left ;
+}
+
+tr.cssEven td
+{
+   background-color     : #FFFFFF ;
+}
+
+tr.cssOdd td
+{
+   background-color     : #E8E8E8 ;
+}
+
+table.cssTable td.cssBlack
+{
+   color                : #FFFFFF ;
+   background-color     : #000000 ;
+}
+
+
+.cssLeft { text-align : left ; }
+.cssCenter { text-align : center ; }
+.cssRight { text-align : right ; }
+.cssJustify { text-align : justify ; }
+
+table.cssTable td.cssLeft { text-align : left ; }
+table.cssTable td.cssCenter { text-align : center ; }
+table.cssTable td.cssRight { text-align : right ; }
+table.cssTable td.cssJustify { text-align : justify ; }
+
+
+
+
+span.cssGraphYes
+{
+   display: inline-block;
+   background-color : #0000FF;
+}
+
+span.cssGraphNo
+{
+   display: inline-block;
+}
+
+
+.cssMargins
+{
+   margin : 10px;
+}
+
+.cssFloatLeft
+{
+   float : left;
+}
+
+.cssFloatRight
+{
+   float : left;
+}
+
+.cssFloatClear
+{
+   float : clear;
+}

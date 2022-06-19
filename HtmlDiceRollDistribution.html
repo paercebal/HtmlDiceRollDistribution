@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script src="HtmlDiceRollDistribution.js"></script>
+<title>HTML Dice Roll Distribution</title>
+<style>@import url("HtmlDiceRollDistribution.css");</style>
+<body onload="doOnLoad()">
+
+<h1>HTML Dice Roll Distribution 1.0</h1>
+
+<script>
+const prefix = "ID_Sample_";
+const howMany = 1;
+
+function gen_id(p_prefix, p_suffix)
+{
+   return p_prefix + p_suffix + "_";
+};
+
+function doOnLoad()
+{
+   let html = [];
+   
+   for(let i = 0; i < howMany; ++i)
+   {
+      html.push("<div id=\"", gen_id(prefix, i), "\" class=\"cssFloatLeft cssMargins\">...</div>");
+   }
+
+   byId("ID_Container").innerHTML = html.join("");
+   
+   postMessage(doOnLoad2);
+}
+
+function doOnLoad2()
+{
+   for(let i = 0; i < howMany; ++i)
+   {
+      displayDistributionWidget(gen_id(prefix, i), 20, 3, (20 - i), 0);
+   }
+}
+</script>
+
+<div id="ID_Container"></div>
+
+</body>
+</html>
